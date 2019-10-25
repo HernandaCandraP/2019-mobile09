@@ -1,10 +1,12 @@
 package com.hernanda.recyclerviewtugas;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.GridLayout;
 import android.widget.LinearLayout;
 
 import com.hernanda.recyclerviewtugas.adapters.TextGambarAdapter;
@@ -48,6 +50,6 @@ public class MainActivity extends AppCompatActivity {
 
         TextGambarAdapter presidenadapter = new TextGambarAdapter(listTextGambar);
         rvTextGambar.setAdapter(presidenadapter);
-        rvTextGambar.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
+        rvTextGambar.setLayoutManager(new GridLayoutManager(this, 2));
     }
 }
